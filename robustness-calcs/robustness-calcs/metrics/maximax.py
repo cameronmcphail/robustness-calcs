@@ -13,8 +13,6 @@ def calc(performance, maximise=True):
     returns a 1D array of the maximax robustness for each solution
     """
 
-    robustness = []
-
     if maximise:
         # We find the best-case (maximum) performance for each solution
         robustness = [max(solution) for solution in performance]
