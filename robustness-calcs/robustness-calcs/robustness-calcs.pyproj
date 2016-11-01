@@ -22,7 +22,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="metrics\maximax.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="metrics\maximin.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="robustness_calcs.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="metrics\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
