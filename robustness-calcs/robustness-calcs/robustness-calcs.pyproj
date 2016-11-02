@@ -34,6 +34,9 @@
     <Compile Include="metrics\optimism_pessimism.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="metrics\starrs_domain.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="robustness_calcs.py" />
   </ItemGroup>
   <ItemGroup>

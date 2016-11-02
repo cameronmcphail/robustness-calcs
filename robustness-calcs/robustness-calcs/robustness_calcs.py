@@ -8,6 +8,7 @@ import maximin
 import maximax
 import optimism_pessimism
 import insufficient_reason
+import starrs_domain
 
 if __name__ == "__main__":
     performance = [[0.7, 0.8, 0.9], [0.8, 0.9, 1.0]]
@@ -18,4 +19,6 @@ if __name__ == "__main__":
     robustness = optimism_pessimism.calc(performance)
     print(robustness)
     robustness = insufficient_reason.calc(performance)
+    print(robustness)
+    robustness = starrs_domain.calc(performance, 0.95)
     print(robustness)

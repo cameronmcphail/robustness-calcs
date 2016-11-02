@@ -2,7 +2,7 @@ import maximin
 import maximax
 
 def calc(performance, alpha=0.5, maximise=True):
-    """Returns the maximin (pessimistic) metric for a set of solutions
+    """Returns the Optimism-Pessimism metric for a set of solutions
 
     Metric obtained from:
     Hurwicz, L. (1953) 'Optimality criterion for decision making under ignorance', Uncertainty and Expectations in Economics: Essays in Honour of GLS Shackle.

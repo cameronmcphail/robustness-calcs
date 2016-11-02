@@ -1,5 +1,5 @@
 def calc(performance):
-    """Returns the maximax (optimistic) metric for a set of solutions
+    """Returns the Principle of Insufficient Reason metric for a set of solutions
 
     Metric obtained from:
     Laplace, P. S. and Simon, P. (1951)
