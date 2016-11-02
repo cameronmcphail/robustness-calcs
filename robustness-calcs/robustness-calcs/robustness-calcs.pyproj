@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="metrics\insufficient_reason.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="metrics\maximax.py">
       <SubType>Code</SubType>
     </Compile>

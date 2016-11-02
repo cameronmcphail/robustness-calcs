@@ -5,7 +5,7 @@ def calc(performance, alpha=0.5, maximise=True):
     """Returns the maximin (pessimistic) metric for a set of solutions
 
     Metric obtained from:
-    Wald, A. (1950) Statistical decision functions. New York; Chapman & Hall: London.
+    Hurwicz, L. (1953) 'Optimality criterion for decision making under ignorance', Uncertainty and Expectations in Economics: Essays in Honour of GLS Shackle.
 
     'performance' is a 2D array of the performance metric used to
         evaluate each solution in each scenario
@@ -19,7 +19,7 @@ def calc(performance, alpha=0.5, maximise=True):
         true  if the aim is to maximise the value of performance (e.g. profit)
         false if the aim is to minimise the value of performance (e.g. cost)
 
-    returns a 1D array of the maximin robustness for each solution
+    returns a 1D array of the optimism-pessimism metric of robustness for each solution
     """
 
     # Get the optimistic robustness
