@@ -10,7 +10,7 @@ import optimism_pessimism
 import insufficient_reason
 import starrs_domain
 
-def calc_all(performance):
+def calc_all(performance, threshold, maximise=True):
     """Returns the robustness values for a variety of metrics
 
     'performance' is a 2D array of the performance metric used to
@@ -36,16 +36,16 @@ def calc_all(performance):
             self.robustness = robustness
 
     robustness = []
-    robustness.append(robustnessMetric("Maximin", maximin.calc(performance)))
-    robustness.append(robustnessMetric("Maximax", maximax.calc(performance)))
-    robustness.append(robustnessMetric("Optimism-Pessimism", optimism_pessimism.calc(performance)))
-    robustness.append(robustnessMetric("Principle of Insufficient Reason", insufficient_reason.calc(performance)))
-    robustness.append(robustnessMetric("Starr's Domain Criterion", starrs_domain.calc(performance, 0.95)))
+    robustness.append(robustnessMetric("Maximin", maximin.calc(performance, maximise)))
+    robustness.append(robustnessMetric("Maximax", maximax.calc(performance, maximise)))
+    robustness.append(robustnessMetric("Optimism-Pessimism", optimism_pessimism.calc(performance, maximise)))
+    robustness.append(robustnessMetric("Principle of Insufficient Reason", insufficient_reason.calc(performance, maximise)))
+    robustness.append(robustnessMetric("Starr's Domain Criterion", starrs_domain.calc(performance, 0.95, maximise)))
     
     return robustness
 
 if __name__ == "__main__":
     performance = [[0.7, 0.8, 0.9], [0.8, 0.9, 1.0]]
-    robustness = calc_all(performance)
+    robustness = calc_all(performance, 0.95)
     for metric in robustness:
         print(metric.name, metric.robustness)
